@@ -13,6 +13,7 @@ async def update_db(collection: object, article: dict):
         obj_id = collection.find_one_and_update(filter={'id': id},
                                                 update={"$set": article},
                                                 upsert=True)
+        print(f"Successfully added article {id} to launches")                                                
     except Exception:
         print(f"Failed to add article {id}")
 

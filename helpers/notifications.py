@@ -1,6 +1,9 @@
 import urllib.request
 import json
 from typing import List
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
 
 
 def get_articles(api_url: str) -> List[dict]:

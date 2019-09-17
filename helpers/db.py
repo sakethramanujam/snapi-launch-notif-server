@@ -4,6 +4,9 @@ import os
 database = os.getenv("SNAPI_DATABASE", default='snapi')
 db_host  = os.getenv("SNAPI_DB_HOST", default='mongodb://127.0.0.1:27017')
 
+print(f"Database:{database}")
+print(f"Host:{db_host}")
+
 def connect() -> object:
     try:
         client = MongoClient(host=db_host)
